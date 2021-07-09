@@ -1,0 +1,15 @@
+{% extends "./layouts/main.html" %}
+{% block content %}
+    <section id="urlbox">
+        <h1>Dán liên kết cần rút ngắn vào đây</h1>
+        <form action="/" method="post">
+          <div id="formurl">
+            <input type="text" name="url" placeholder="Nơi nhập liên kết">
+            <div id="formbutton">
+              <input type="submit" value="Rút Ngắn">
+            </div>
+          </div>
+        </form>
+        <p class="boxtextcenter">Rutgon.biz là trang web được xây dựng để hỗ trợ người dùng tạo các liên kết ngắn gọn.</p>
+      </section>
+{% endblock %}

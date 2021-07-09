@@ -1,0 +1,30 @@
+{% extends "./layouts/main.html" %}
+{% block content %}
+      <section id="urlbox">
+        <br><br>
+        <div id="formurl" style="max-width: 400px;">
+          <input id="shortenurl" type="text" value="{{ shortUrl }}" onclick="">
+          <div id="formbutton">
+            <input type="button" data-clipboard-target="#shortenurl" class="copy" value="Copy" onclick="if (!window.__cfRLUnblockHandlers) return false; toggle_visibility('balloon');">
+          </div>
+        </div>
+        <div id="formurl" style="max-width: 400px; display: block;">
+          <div id="balloon" style="display: none;">URL Copied</div>
+          {# khi click nut copy sẽ hiển thị balloon này lên cho người dùng thấy #}
+        </div>
+        <p class="boxtextleft">Long URL: <a href="{{url}}" target="_blank">{{url}}</a><br><br>
+          Theo dõi <a href="#">toàn bộ dữ liệu </a> theo thời gian của liên kết này.<br>
+          Tạo liên kết khác <a href="https://rutgon.biz/">Rút gọn</a>. 
+        </p>
+      </section>
+      <section id="content">
+        <h2>Đăng nhập</h2>
+        <div class="socialnetworkbox">
+          <p>
+            <a class="snb snbfacebook" href="#" onclick="">Facebook</a>
+            <a class="snb google" href="#" onclick="">Google</a>
+        
+          </p>
+        </div>
+      </section>
+{% endblock %}

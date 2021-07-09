@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    {% include "./header.html" %}
+  </head>
+  <body>
+    <header>
+      <div id="logo">
+        <a href="https://www.rutgon.biz" class="logo">Rutgon.Biz</a>
+      </div>
+    </header>
+    <main>
+      {% block content %}
+      {% endblock %}
+    </main>
+    <footer>
+      <div id="footerbox">
+        <div>© 2021 Tecinus - Make everything simple</div>
+        <ul>
+          <li>
+            <a href="https://rutgon.biz/">Rutgon.biz</a>
+          </li>
+          <li>|</li>
+          <li>
+            <a href="#">Tecinus</a>
+          </li>
+          <li>|</li>
+          <li>
+            <a href="#">MCBooks</a>
+          </li>
+          <li>|</li>
+          <li>
+            <a href="#">Bizbooks</a>
+          </li>
+          <li>|</li>
+          <li>
+            <a href="#">Changmi</a>
+          </li>
+          <li>|</li>
+          <li>
+            <a href="#">Kaixin</a>
+          </li>
+          <li>|</li>
+          <li>
+            <a href="#">Saiwai</a>
+          </li>
+        </ul>
+      </div>
+    </footer>
+    <script data-cfasync="false" async src="js/sw.js"></script>
+    <script src="https://ajax.cloudflare.com/cdn-cgi/scripts/7d0fa10a/cloudflare-static/rocket-loader.min.js" data-cf-settings="4e158ea82215486f039577f5-|49" defer=""></script>
+  </body>
+</html>

@@ -1,0 +1,109 @@
+{% extends "../layouts/main.html" %}
+{% block css %}
+    <link rel="stylesheet" href="/lte/plugins/summernote/summernote-bs4.css">
+{% endblock %}
+<script></script>
+{% block js %}
+    <script src="/lte/plugins/summernote/summernote-bs4.js"></script>
+    <script>
+        $(function () {
+            $('#note1').summernote({
+                width: 2000,
+                toolbar: [
+                    // ['style', ['style']],
+                    ['font', ['bold', 'underline', 'italic']],
+                    // ['color', ['color']],
+                    ['para', ['ul', 'ol', 'paragraph']],
+                    ['view', ['fullscreen', 'codeview']]
+                ]
+            });
+        });
+
+    </script>
+{% endblock %}
+{% block content %}
+    <div class="container-fluid">
+        <form role="form">
+            <div class="row">
+
+                <!-- left column -->
+                <div class="col-md-8">
+                    <!-- general form elements -->
+                    <div class="card card-primary">
+                        <div class="card-header">
+                            <h3 class="card-title">Thông tin chính</h3>
+                        </div>
+                        <!-- /.card-header -->
+                        <!-- form start -->
+
+                        <div class="card-body">
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">Tên liên kết</label>
+                                <input type="text" class="form-control" name="title" placeholder="Nhập tên liên kết ở đây">
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputPassword1">Liên kết gốc</label>
+                                <input type="url" class="form-control" name="url" placeholder="Liên kết gốc VD: https://abc.com/zyz/1234.html">
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputPassword1">Liên kết tùy chỉnh</label>
+                                <input type="url" class="form-control" name="customUrl" placeholder="Liên kết gốc VD: rutgon.biz/khuyen_mai">
+                            </div>
+                            <div class="form-group">
+                                <label>Ghi chú :</label>
+                                <div class="input-group" style="width: 100%">
+                                    {# <div class="input-group-prepend"> #}
+                                    {# <span class="input-group-text"><i class="far fa-calendar-alt"></i></span> #}
+                                    {# </div> #}
+                                    <textarea id="note1" name="note"
+                                            style="width: 100% ;visibility: visible; display: block">
+                                        <p>Các báo cáo cần chuẩn bị :&nbsp;</p><ol><li>Báo cáo doanh số</li><li>Báo cáo sách mới</li><li>Báo cáo sách tồn</li></ol>
+                                    </textarea>
+                                </div>
+                                <!-- /.input group -->
+                            </div>
+                            {# <div class="form-group">
+                                <label for="exampleInputFile">Mã liên kết</label>
+                                <input type="text" class="form-check-input" name="url_code" id="url_code">
+                            </div> #}
+                        </div>
+                        <!-- /.card-body -->
+
+                        <div class="card-footer">
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                        </div>
+
+                    </div>
+                    <!-- /.card -->
+
+                </div>
+                <!--/.col (left) -->
+                <!-- right column -->
+                <div class="col-md-4">
+                    <div class="card card-primary card-outline">
+                        <div class="card-body box-profile">
+                            <div class="text-center">
+                                <img class="profile-user-img img-fluid" src="/img/94mjaj.png" alt="QRCODE">
+                            </div>
+
+                            <p class="profile-username text-center">Mã: aBz23E</p>
+                            <div class="form-group">
+                                <label for="exampleInputPassword1">Liên kết rút gọn</label>
+                                <input type="url" class="form-control" name="shortUrl" placeholder="Liên kết gốc VD: rutgon.biz/abc123">
+                            </div>
+                            <div class="form-group">
+                                <select class="form-control select2 select2-hidden-accessible" style="width: 100%;" id="active">
+                                    <option selected="selected">Kích hoạt</option>
+                                    <option>Không kích hoạt</option>
+                                </select>
+                            </div>
+                        </div>
+                        <!-- /.card-body -->
+                    </div>
+                </div>
+                <!--/.col (right) -->
+            </div>
+        </form>
+        <!-- /.row -->
+    </div>
+{% endblock %}
